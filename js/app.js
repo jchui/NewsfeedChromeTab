@@ -1,6 +1,19 @@
-angular.module('myApp', [])
+angular.module('myApp', ['ngRoute'])
 
-.controller("PostsCtrl", function($scope, $http, $timeout) {
+.config(function($routeProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'templates/home.html', 
+      controller: 'HomeCtrl'
+    })
+    .when('/settings', {
+      templateUrl: 'templates/settings.html',
+      controller: 'SettingsCtrl'
+    })
+    .otherwise({redirectTo: '/'});
+})
+
+.controller("HomeCtrl", function($scope, $http, $timeout) {
 	
 	$scope.loading = true;
 	
@@ -31,4 +44,9 @@ angular.module('myApp', [])
 	
 	$scope.key = "";
 	
+})
+
+.controller('SettingsCtrl',
+  function($scope) {
+    // Our controller will go here
 });

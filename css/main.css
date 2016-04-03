@@ -40,6 +40,16 @@ body {
 	z-index: -100;
 }
 
+.navigation {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.navigation a {
+	color: #ffffff;
+}
+
 .container {
 	padding-top: 60px;
 }
