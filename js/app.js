@@ -1,16 +1,20 @@
-angular.module('myApp', ['ngRoute'])
+angular.module('myApp', ['ui.router'])
 
-.config(function($routeProvider) {
-  $routeProvider
-    .when('/', {
-      templateUrl: 'templates/home.html', 
+.config(function($stateProvider, $urlRouterProvider) {
+	
+  $urlRouterProvider.otherwise("/home");
+  
+  $stateProvider
+    .state('home', {
+      url: "/state1",
+      templateUrl: "templates/home.html",
       controller: 'HomeCtrl'
     })
-    .when('/settings', {
-      templateUrl: 'templates/settings.html',
+    .state('settings', {
+      url: "/state2",
+      templateUrl: "templates/settings.html",
       controller: 'SettingsCtrl'
-    })
-    .otherwise({redirectTo: '/'});
+    });
 })
 
 .controller("HomeCtrl", function($scope, $http, $timeout) {
@@ -19,19 +23,15 @@ angular.module('myApp', ['ngRoute'])
 	
 	$scope.date = {};
  
-	// Update function
 	var updateTime = function() {
 		$scope.date.raw = new Date();
 			$timeout(updateTime, 1000);
 		}
-		
-	// Kick off the update function
+	
 	updateTime();
     
-    var apikey = '';
-    var phase = '';
-    
-    /*$http.get('data/posts.json').*/
+    var apikey = 'API_KEY_HERE';
+    var phase = '3b';
     
     $http.get('http://api.jchui.me/minerva/?apikey=' + apikey + '&phase=' + phase).
 		success(function(data, status, headers, config) {
@@ -39,7 +39,7 @@ angular.module('myApp', ['ngRoute'])
 		$scope.loading = false;
 	}).
 		error(function(data, status, headers, config) {
-	// log error
+			// Log error
 	});
 	
 	$scope.key = "";
@@ -48,5 +48,5 @@ angular.module('myApp', ['ngRoute'])
 
 .controller('SettingsCtrl',
   function($scope) {
-    // Our controller will go here
+    // Settings stuff
 });
