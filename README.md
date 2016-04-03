@@ -1,1 +1,1 @@
-# NewsFeedChromeTab
+# Chrome New Tab Extension

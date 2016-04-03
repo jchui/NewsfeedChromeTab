@@ -1,0 +1,142 @@
+/* Include this file in your html if you are using the CSP mode. */
+
+@charset "UTF-8";
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
+.ng-cloak, .x-ng-cloak,
+.ng-hide:not(.ng-hide-animate) {
+  display: none !important;
+}
+
+ng\:form {
+  display: block;
+}
+
+.ng-animate-shim {
+  visibility:hidden;
+}
+
+.ng-anchor {
+  position:absolute;
+}
+
+/* CSS */
+
+body {
+	font-family: 'Lato', sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color: #000000;
+}
+
+.background {
+	background-image: url("../img/lake.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: fixed;
+	opacity: 0.85;
+	width: 100%;
+	height: 100%;
+	z-index: -100;
+}
+
+.container {
+	padding-top: 60px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 9em;
+	font-weight: 100;
+	color: #ffffff;
+	padding: 0;
+	margin: 0;
+}
+
+h2 {
+	text-align: center;
+	font-size: 1.7em;
+	font-weight: 100;
+	color: #ffffff;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	top: -5px;
+}
+
+table {
+	margin: auto;
+	margin-top: 5%;
+	width: 80%;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 10px 20px;
+}
+
+td:first-child {
+	width: 100px;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	font-weight: 100;
+}
+
+td {
+	padding: 10px 0px 10px 0;
+	color: #ffffff;
+	vertical-align: middle;
+}
+
+td:nth-child(3) {
+	padding-right: 50px;
+	letter-spacing: 0.8px;
+}
+
+td a {
+	font-size: 1.2em;
+	color: #ffffff;
+	text-decoration: none;
+	
+	line-height: 1.6em;
+}
+
+td i {
+	opacity: 0;
+	position: relative;
+	top: 1px;
+	padding-left: 5px;
+}
+
+td a:hover i {
+	opacity: 1;
+	transition: 0.5s;
+}
+
+.error {
+	font-size: 1.2em;
+	letter-spacing: 0.8px;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: right;
+	font-size: 2em;
+	color: #ffffff;
+	padding-bottom: 20px;
+	
+}
+
+.footer span {
+	padding-right: 30px;
+}
+
+.footer a {
+	color: #ffffff;
+	opacity: 0.8;
+	padding: 0 5px;
+}
+
+.footer a:hover {
+	opacity: 1;
+	transition: 0.8s;
+}

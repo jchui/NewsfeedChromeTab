@@ -1,0 +1,51 @@
+<!doctype html>
+<html data-ng-app="myApp" data-ng-csp="">
+  <head>
+    <meta charset="UTF-8">
+    <title>New Tab</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/foundation-icons/foundation-icons.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+	  
+	<div class="background"></div>
+    
+	<div class="container">
+		<div ng-controller="PostsCtrl">
+			<div id="datetime">
+				<!--
+				<h1>{{ date.raw | date:'HH mm ss' }}</h1>
+				<h2>{{ date.raw | date:'EEEE, MMMM yyyy' }}</h2>
+				-->
+			</div>
+		</div>
+		
+		<div ng-controller="PostsCtrl">
+			
+			<h1>{{ date.raw | date:'hh:mm:ss' }}<br/></h1>
+			<h2>{{ date.raw | date:'EEEE, dd MMMM yyyy' }}</h2>
+			
+			<table>
+				<tr ng-show="loading">
+					<td></td>
+					<td colspan="2" class="error">Loading...</td>
+				</tr>
+			    <tr ng-repeat="post in posts" ng-if="$index < 5">
+			    	<td>{{post.date}}</td>
+			    	<td class="error" ng-hide="json.loaded">{{posts.Error}}</td>
+			    	<td><a href="{{key}}">{{post.title}} <i class="fi-arrow-right"></i></a></td>
+			    </tr>
+			</table>
+		</div>
+	</div>
+	
+	<div class="footer">
+		<span><a href="http://twitter.com/jtkchui"><i class="fi-social-twitter"></i></a><a href="http://github.com/jchui"><i class="fi-social-github"></i></a></span>
+	</div>
+    
+    <script src="./js/vendor/angular.min.js"></script>
+    <script src="./js/vendor/angular-route.min.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
