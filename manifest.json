@@ -1,11 +1,9 @@
 {
   "manifest_version": 2,
   "name": "New Tab Extension",
-  "description": "A new tab window with an integrated newsfeed",
+  "description": "A new tab window with an integrated newsfeed for University of Sheffield medical students. Note: This is still a beta.",
   
   "author": "Jeremy Chui",
-  
-  "default_locale": "en",
   "version": "0.1",
   "permissions": [
     "http://api.jchui.me/minerva/"
