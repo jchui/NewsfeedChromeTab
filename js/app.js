@@ -74,6 +74,7 @@ angular.module('myApp', ['ui.router'])
 	});
 	
 	$scope.key = apikey;
+	$scope.phase = phase;
 	
 })
 
