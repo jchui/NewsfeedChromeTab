@@ -31,13 +31,13 @@ angular.module('myApp', ['ui.router'])
   var service = {
     user: {},
     save: function() {
-      sessionStorage.newsfeed =
+      localStorage.newsfeed =
         angular.toJson(service.user);
     },
     restore: function() {
       // Pull from sessionStorage
       service.user = 
-        angular.fromJson(sessionStorage.newsfeed) || defaults
+        angular.fromJson(localStorage.newsfeed) || defaults
  
       return service.user;
     }
@@ -101,6 +101,8 @@ angular.module('myApp', ['ui.router'])
     
     $scope.url = url;
     $scope.date = date;
+    
+    console.log(date);
     
     $http.get('http://api.jchui.me/minerva/posts/?apikey=' + apikey + '&notice=' + url).
 		success(function(data, status, headers, config) {
