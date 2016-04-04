@@ -1,1 +1,31 @@
 <h2>Customise Settings</h2>
+
+<div class="settings">
+	<form ng-submit="save()">
+		<span>
+		<p class="title">API Key</p>
+		<p class="info">Information goes here</p>
+		<input type="text"
+				ng-model="user.apikey"
+				placeholder="Enter your API key" />
+		</span>
+		
+		<span>
+		<p class="title">Phase</p>
+		<p class="info">Information goes here</p>
+		<select ng-model="user.phase">
+	    	<option value="1">Phase 1</option>
+			<option value="2a">Phase 2a</option>
+			<option value="2b">Phase 2b</option>
+			<option value="3a">Phase 3a</option>
+			<option value="3b">Phase 3b</option>
+			<option value="4">Phase 4</option>
+	    </select>
+		</span>
+		
+		<span>
+		<input class="btn btn-primary" 
+		        type="submit" value="Save" />
+		</span>
+	</form>
+</div>
