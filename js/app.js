@@ -14,6 +14,11 @@ angular.module('myApp', ['ui.router'])
       url: "/settings",
       templateUrl: "templates/settings.html",
       controller: 'SettingsCtrl'
+    })
+    .state('message', {
+      url: "/:url?date",
+      templateUrl: "templates/messages.html",
+      controller: 'MessagesCtrl'
     });
 })
 
@@ -81,4 +86,33 @@ angular.module('myApp', ['ui.router'])
       UserService.save();
     }   
    
+})
+
+.controller('MessagesCtrl', function($scope, $state, $stateParams, $http, UserService, $sce) {
+    
+    $scope.user = UserService.user;
+    var apikey = $scope.user.apikey;
+ 
+    var url = $stateParams.url; //getting url
+    var date = $stateParams.date; //getting url
+    
+    $scope.state = $state.current
+    $scope.params = $stateParams; 
+    
+    $scope.url = url;
+    $scope.date = date;
+    
+    $http.get('http://api.jchui.me/minerva/posts/?apikey=' + apikey + '&notice=' + url).
+		success(function(data, status, headers, config) {
+		$scope.notice = data;
+		
+		$scope.getNewsfeedData = function() {
+	       return $sce.trustAsHtml(data.content);
+	   	};
+		
+	}).
+		error(function(data, status, headers, config) {
+			// Log error
+	});
+	
 });
