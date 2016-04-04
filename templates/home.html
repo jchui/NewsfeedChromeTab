@@ -1,16 +1,13 @@
-<div>
-	
-	<h1>{{ date.raw | date:'HH:mm:ss' }}<br/></h1>
-	<h2>{{ date.raw | date:'EEEE, dd MMMM yyyy' }}</h2>
-	
-	<table>
-		<tr ng-show="loading">
-			<td colspan="3" class="error" style="text-transform:none; text-align: center;">Loading...</td>
-		</tr>
-	    <tr ng-repeat="post in posts" ng-if="$index < 5">
-	    	<td>{{post.date}}</td>
-	    	<td class="error" ng-hide="json.loaded">{{posts.Error}}</td>
-	    	<td><a href="{{key}}">{{post.title}} <i class="fi-arrow-right"></i></a></td>
-	    </tr>
-	</table>
-</div>
+<h1>{{ date.raw | date:'HH:mm:ss' }}<br/></h1>
+<h2>{{ date.raw | date:'EEEE, dd MMMM yyyy' }}</h2>
+
+<table>
+	<tr ng-show="loading">
+		<td colspan="3" class="error" style="text-transform:none; text-align: center;">Loading...</td>
+	</tr>
+    <tr ng-repeat="post in posts" ng-if="$index < 5">
+    	<td>{{post.date}}</td>
+    	<td class="error" ng-hide="json.loaded">{{posts.Error}}</td>
+    	<td><a href="http://api.jchui.me/minerva/?apikey={{key}}">{{post.title}} <i class="fi-arrow-right"></i></a></td>
+    </tr>
+</table>

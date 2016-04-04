@@ -6,12 +6,12 @@ angular.module('myApp', ['ui.router'])
   
   $stateProvider
     .state('home', {
-      url: "/state1",
+      url: "/home",
       templateUrl: "templates/home.html",
       controller: 'HomeCtrl'
     })
     .state('settings', {
-      url: "/state2",
+      url: "/settings",
       templateUrl: "templates/settings.html",
       controller: 'SettingsCtrl'
     });
@@ -42,7 +42,7 @@ angular.module('myApp', ['ui.router'])
 			// Log error
 	});
 	
-	$scope.key = "";
+	$scope.key = apikey;
 	
 })
 
