@@ -2,17 +2,17 @@
 
 <div class="settings">
 	<form ng-submit="save()">
-		<span>
+		<div>
 		<p class="title">API Key</p>
-		<p class="info">Information goes here</p>
+		<p class="info">Go to <a href="http://api.jchui.me">api.jchui.me</a> to generate your API key.</p>
 		<input type="text"
 				ng-model="user.apikey"
 				placeholder="Enter your API key" />
-		</span>
+		</div>
 		
-		<span>
+		<div>
 		<p class="title">Phase</p>
-		<p class="info">Information goes here</p>
+		<p class="info">Which newsfeed would you like to display?</p>
 		<select ng-model="user.phase">
 	    	<option value="1">Phase 1</option>
 			<option value="2a">Phase 2a</option>
@@ -21,11 +21,11 @@
 			<option value="3b">Phase 3b</option>
 			<option value="4">Phase 4</option>
 	    </select>
-		</span>
+		</div>
 		
-		<span>
-		<input class="btn btn-primary" 
-		        type="submit" value="Save" />
-		</span>
+		<div>
+		<input class="save-btn" 
+		        type="submit" value="Save Settings" />
+		</div>
 	</form>
 </div>
