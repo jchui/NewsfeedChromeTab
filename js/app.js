@@ -78,12 +78,13 @@ angular.module('myApp', ['ui.router'])
 })
 
 .controller('SettingsCtrl',
-  function($scope, UserService) {
+  function($scope, UserService, $location) {
    
 	$scope.user = UserService.user;
 	
 	$scope.save = function() {
-      UserService.save();
+       UserService.save();
+       $location.path('/home');
     }   
    
 })
@@ -101,8 +102,6 @@ angular.module('myApp', ['ui.router'])
     
     $scope.url = url;
     $scope.date = date;
-    
-    console.log(date);
     
     $http.get('http://api.jchui.me/minerva/posts/?apikey=' + apikey + '&notice=' + url).
 		success(function(data, status, headers, config) {

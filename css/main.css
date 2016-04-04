@@ -37,7 +37,7 @@ p {
 }
 
 .background {
-	background-image: url("../img/lake.jpg");
+	background-image: url("http://api.jchui.me/minerva/images/bg.jpg"), url("../img/lake.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: fixed;
