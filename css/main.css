@@ -172,6 +172,22 @@ table.newsfeed {
 	padding: 10px 0;
 }
 
+.issue {
+	float: left;
+}
+
+.issue a {
+	color: #ffffff;
+	text-decoration: none;
+	padding-bottom: 2px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+
+.issue a:hover {
+	border-bottom: 1px solid #ffffff;
+	transition: 0.8s;
+}
+
 .error {
 	font-size: 1.2em;
 	letter-spacing: 0.8px;
@@ -250,6 +266,7 @@ table.newsfeed {
 	padding-bottom: 2px;
 	text-decoration: none;
 	border-bottom: 1px solid rgba(255, 255, 255, 0);
+	font-weight: 300;
 }
 
 .settings a:hover {

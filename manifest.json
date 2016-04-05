@@ -2,10 +2,10 @@
   "manifest_version": 2,
   "name": "Athena New Tab Extension",
   "short_name": "Athena",
-  "description": "A new tab window with an integrated newsfeed for University of Sheffield medical students. Note: This is still a beta.",
+  "description": "A new tab window with a dynamic background and an integrated newsfeed for University of Sheffield medical students.",
   
   "author": "Jeremy Chui",
-  "version": "0.2",
+  "version": "0.3",
   "permissions": [
     "http://api.jchui.me/minerva/"
   ],
