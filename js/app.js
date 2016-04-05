@@ -79,9 +79,17 @@ angular.module('myApp', ['ui.router'])
 })
 
 .controller('SettingsCtrl',
-  function($scope, UserService, $location) {
+  function($scope, UserService, $location, $http) {
    
 	$scope.user = UserService.user;
+	
+	$http.get('http://api.jchui.me/minerva/notice/').
+		success(function(data, status, headers, config) {
+		$scope.notice = data;
+	}).
+		error(function(data, status, headers, config) {
+			// Log error
+	});
 	
 	$scope.save = function() {
        UserService.save();

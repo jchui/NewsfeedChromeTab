@@ -2,6 +2,7 @@
 
 <div class="settings">
 	<form ng-submit="save()">
+		<p class="info"><center>{{notice.content}}</center></p>
 		<div>
 		<p class="title">API Key</p>
 		<p class="info">Go to <a href="http://api.jchui.me/request">api.jchui.me/request</a> to generate your API key.</p>
@@ -27,5 +28,6 @@
 		<input class="save-btn" 
 		        type="submit" value="Save Settings" />
 		</div>
+		<p></p>
 	</form>
 </div>
