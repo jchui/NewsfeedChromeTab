@@ -8,7 +8,7 @@
     <tr ng-repeat="post in posts" ng-if="$index < 5">
     	<td>{{post.date}}</td>
     	<td class="error" ng-hide="json.loaded">{{posts.Error}}</td>
-    	<td><a ui-sref="message({url: '{{post.link}}', date: '{{post.date}}'})">{{post.title}} <i class="fi-arrow-right"></i></a></td>
+    	<td><a ui-sref="message({url: '{{post.link}}', date: '{{post.date}}'})"><span ng-if="post.today==true" class="new">NEW </span>{{post.title}} <i class="fi-arrow-right"></i></a></td>
     </tr>
 </table>
 <div class="updated">

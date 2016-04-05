@@ -159,6 +159,10 @@ table.newsfeed {
 	transition: 0.5s;
 }
 
+.new {
+	font-weight: 700;
+}
+
 .updated {
 	width: 80%;
 	margin: auto;

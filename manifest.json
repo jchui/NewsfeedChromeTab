@@ -5,7 +5,7 @@
   "description": "A new tab window with an integrated newsfeed for University of Sheffield medical students. Note: This is still a beta.",
   
   "author": "Jeremy Chui",
-  "version": "0.1",
+  "version": "0.2",
   "permissions": [
     "http://api.jchui.me/minerva/"
   ],
