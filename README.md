@@ -5,7 +5,7 @@ A new tab window with an integrated newsfeed for University of Sheffield medical
 ![screenshot](http://api.jchui.me/minerva/images/screenshots/screenshot1.png)
 ![screenshot](http://api.jchui.me/minerva/images/screenshots/screenshot2.png)
 
-This chrome extension is only accessible by University of Sheffield medical students, and requires an authentication code generated at api.jchui.me/request.
+This chrome extension is only accessible by University of Sheffield medical students, and requires an authentication code generated at [api.jchui.me/request](http://api.jchui.me/request).
 
 ### Version
 0.1
