@@ -24,7 +24,7 @@ angular.module('myApp', ['ui.router'])
 
 .factory('UserService', function() {
   var defaults = {
-  	apikey: 'API_KEY_HERE',
+  	apikey: '',
     phase: '3b'
   };
  
@@ -92,6 +92,8 @@ angular.module('myApp', ['ui.router'])
 
 .controller('MessagesCtrl', function($scope, $state, $stateParams, $http, UserService, $sce) {
     
+    $scope.loading = true;
+    
     $scope.user = UserService.user;
     var apikey = $scope.user.apikey;
  
@@ -111,6 +113,8 @@ angular.module('myApp', ['ui.router'])
 		$scope.getNewsfeedData = function() {
 	       return $sce.trustAsHtml(data.content);
 	   	};
+	   	
+	   	$scope.loading = false;
 		
 	}).
 		error(function(data, status, headers, config) {

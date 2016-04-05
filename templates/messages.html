@@ -3,6 +3,8 @@
 	<div style="float:right;font-size:1.2em;">{{date}}</div>
 	
 	<div ng-bind-html="getNewsfeedData()" class="post"></div>
+	
+	<div ng-show="loading" style="font-size: 1.2em;"><center>Fetching Newsfeed content...</center></div>
 		
 	</div>
 </div>

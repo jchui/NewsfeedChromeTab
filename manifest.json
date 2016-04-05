@@ -15,5 +15,8 @@
   "content_security_policy": "script-src 'self'; object-src 'self'",
   "chrome_url_overrides" : {
     "newtab": "tab.html"
-  }
+  },
+  "icons": { "16": "img/16.png",
+           "48": "img/48.png",
+          "128": "img/128.png" }
 }
