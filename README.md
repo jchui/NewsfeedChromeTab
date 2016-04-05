@@ -22,7 +22,7 @@ You can read up more on installing unpacked chrome extensions [here](https://dev
 6. Select "Load Unpacked Extension"
 7. Navigate to unzipped folder and press "Select"
 8. Open new Chrome tab window to see it in action
-9. The Chrome extension still requires an authentication key for it to work. To generate one, go to api.jchui.me/request
+9. The Chrome extension still requires an authentication key for it to work. To generate one, go to [api.jchui.me/request](http://api.jchui.me/request)
 10. Once you have received your authentication key via email, open a new Chrome tab and go into "Settings", found by clicking on the wrench icon in the top-right hand corner
 11. Paste the authentication key in the settings dialog and press save
 12. And you're done!
