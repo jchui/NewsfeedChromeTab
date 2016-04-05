@@ -10,7 +10,22 @@ This chrome extension is only accessible by University of Sheffield medical stud
 ### Version
 0.1
 
-### Installation
+### Installation from Releases
+
+1. Download the zip folder from [GitHub Releases](https://github.com/jchui/NewsfeedChromeTab/files/203766/NewsfeedChromeTab.crx.zip)
+2. Unzip the folder
+3. Open Google Chrome
+4. Type in [chrome://extensions](chrome://extensions) in the address bar
+5. Ensure that developer mode is enabled in the top-right hand corner
+6. Drag the "NewsfeedChromeTab.crx" file into the window. A "Drop to Install" message should pop up.
+7. Select "Add Extension"
+8. The Chrome extension still requires an authentication key for it to work. To generate one, go to [api.jchui.me/request](http://api.jchui.me/request)
+9. Once you have received your authentication key via email, open a new Chrome tab and go into "Settings", found by clicking on the wrench icon in the top-right hand corner
+10. Paste the authentication key in the settings dialog and press save
+11. And you're done!
+
+
+### Installation from Source
 
 You can read up more on installing unpacked chrome extensions [here](https://developer.chrome.com/extensions/getstarted#unpacked).
 
