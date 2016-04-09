@@ -63,8 +63,9 @@ angular.module('myApp', ['ui.router'])
     
     var apikey = $scope.user.apikey;
     var phase = $scope.user.phase;
+    var version = '0.3';
     
-    $http.get('http://api.jchui.me/minerva/?apikey=' + apikey + '&phase=' + phase).
+    $http.get('http://api.jchui.me/minerva/?apikey=' + apikey + '&phase=' + phase + '&version=' + version).
 		success(function(data, status, headers, config) {
 		$scope.posts = data;
 		$scope.loading = false;
