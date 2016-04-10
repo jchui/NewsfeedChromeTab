@@ -1,19 +1,32 @@
-<h1>{{ date.raw | date:'HH:mm:ss' }}<br/></h1>
-<h2>{{ date.raw | date:'EEEE, dd MMMM yyyy' }}</h2>
-
-<table class="newsfeed">
-	<tr ng-show="loading">
-		<td colspan="3" class="error" style="text-transform:none; text-align: center;">Loading Newsfeed...</td>
-	</tr>
-    <tr ng-repeat="post in posts" ng-if="$index < 5">
-    	<td>{{post.date}}</td>
-    	<td class="error" ng-hide="json.loaded">{{posts.Error}}</td>
-    	<td><a ui-sref="message({url: '{{post.link}}', date: '{{post.date}}'})"><span ng-if="post.today==true" class="new">NEW </span>{{post.title}} <i class="fi-arrow-right"></i></a></td>
-    </tr>
-</table>
-<div class="updated">
-	<div class="issue">
-		<a href="https://github.com/jchui/NewsfeedChromeTab/issues">Got any suggestions?</a>
+<div class="row">
+	<div class="large-12 columns">
+		<h1>{{ date.raw | date:'HH:mm:ss' }}<br/></h1>
+		<h2>{{ date.raw | date:'EEEE, dd MMMM yyyy' }}</h2>
 	</div>
-	Currently displaying Phase {{phase}} Newsfeed. Updated every 15 minutes.
+</div>
+
+<div class="row">
+	<div class="large-12 columns">
+		<table class="newsfeed">
+			<tr ng-show="loading">
+				<td colspan="3" class="error" style="text-transform:none; text-align: center;">Loading Newsfeed...</td>
+			</tr>
+		    <tr ng-repeat="post in posts" ng-if="$index < 5">
+		    	<td>{{post.date}}</td>
+		    	<td class="error" ng-hide="json.loaded">{{posts.Error}}</td>
+		    	<td><a ui-sref="message({url: '{{post.link}}', date: '{{post.date}}'})"><span ng-if="post.today==true" class="new">NEW </span>{{post.title}} <i class="fi-arrow-right"></i></a></td>
+		    </tr>
+		</table>
+	</div>
+</div>
+
+<div class="row">
+	<div class="large-12 columns">
+		<div class="updated">
+			<div class="issue">
+				<a href="https://github.com/jchui/NewsfeedChromeTab/issues">Got any suggestions?</a>
+			</div>
+			Currently displaying Phase {{phase}} Newsfeed. Updated every 15 minutes.
+		</div>
+	</div>
 </div>

@@ -45,6 +45,11 @@ body {
 	padding: 0;
 	margin: 0;
 	background-color: #000000;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+.row {
+	max-width: 100%;
 }
 
 p {
@@ -98,6 +103,7 @@ h1 {
 	text-align: center;
 	font-size: 9em;
 	font-weight: 100;
+	line-height: normal;
 	color: #ffffff;
 	padding: 0;
 	margin: 0;
@@ -126,10 +132,11 @@ table.newsfeed {
 	width: 100px;
 	font-size: 1.2em;
 	font-weight: 100;
+	padding-left: 20px;
 }
 
 .newsfeed td {
-	padding: 10px 0px 10px 0;
+	padding: 10px 0px;
 	color: #ffffff;
 	vertical-align: middle;
 }
@@ -198,7 +205,7 @@ table.newsfeed {
 	margin-top: 1%;
 	width: 80%;
 	background-color: rgba(0, 0, 0, 0.5);
-	padding: 20px 30px;
+	padding: 20px 30px 40px 30px;
 	color: #ffffff;
 	margin-bottom: 100px;
 }
@@ -222,9 +229,13 @@ table.newsfeed {
 .notice h3:first-child {
 	font-weight: 300;
 	font-size: 1.2em;
-	padding-bottom: 15px;
+	padding: 0;
+	padding-bottom: 10px;
 	border-bottom: 1px solid #ffffff;
 	width: 100%;
+	margin: 0;
+	margin-bottom: 10px;
+	line-height: normal;
 }
 
 .notice p {
@@ -239,9 +250,9 @@ table.newsfeed {
 	padding: 5px;
 }
 
-.settings{
+.settings {
 	margin: auto;
-	margin-top: 4%;
+	margin-top: 3%;
 	width: 50%;
 	background-color: rgba(0, 0, 0, 0.5);
 	padding: 20px 30px;
@@ -279,6 +290,11 @@ table.newsfeed {
 	font-size: 1.2em;
 	font-weight: 100;
 	width: 60%;
+	color: #000000;
+}
+
+.settings select {
+	color: #000000;
 }
 
 .settings .save-btn {
