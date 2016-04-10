@@ -53,6 +53,13 @@ angular.module('myApp', ['ui.router'])
 	$scope.loading = true;
 	$scope.user = UserService.user;
 	$scope.date = {};
+	
+	// Loading Animation
+	i = 0;
+	setInterval(function() {
+	  i = ++i % 4;
+	  $("#loading").html("Loading Newsfeed"+Array(i+1).join("."));
+	}, 800);
  
 	var updateTime = function() {
 		$scope.date.raw = new Date();
@@ -102,6 +109,13 @@ angular.module('myApp', ['ui.router'])
 .controller('MessagesCtrl', function($scope, $state, $stateParams, $http, UserService, $sce) {
     
     $scope.loading = true;
+    
+    // Loading Animation
+	i = 0;
+	setInterval(function() {
+	  i = ++i % 4;
+	  $("#loading").html("Fetching Newsfeed content"+Array(i+1).join("."));
+	}, 800);
     
     $scope.user = UserService.user;
     var apikey = $scope.user.apikey;
